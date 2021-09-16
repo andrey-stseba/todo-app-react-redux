@@ -1,6 +1,6 @@
 import React from 'react';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-import s from './TackListItem.module.scss';
+import s from './TackList.module.scss';
 import { deleteTask, updateTask } from '../../actions';
 import { connect } from 'react-redux';
 
@@ -33,7 +33,7 @@ function TasksList (props) {
   );
 }
 
-const mapStateToProps = state => state.taskState;
+const mapStateToProps = state => state.task;
 const mapDispatchToProps = dispatch => {
   return {
     deleteTaskAction: id => {
